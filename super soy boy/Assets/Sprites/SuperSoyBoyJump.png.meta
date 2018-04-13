@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 62cf06125efa639459c77d555fbb2d4d
-timeCreated: 1523551154
+timeCreated: 1523639068
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -89,10 +89,10 @@ TextureImporter:
       name: SuperSoyBoyJump_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,10 +102,10 @@ TextureImporter:
       name: SuperSoyBoyJump_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 75
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,10 +115,10 @@ TextureImporter:
       name: SuperSoyBoyJump_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 150
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: SuperSoyBoyJump_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 226
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: SuperSoyBoyJump_4
       rect:
         serializedVersion: 2
-        x: 192
+        x: 300
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,10 +154,10 @@ TextureImporter:
       name: SuperSoyBoyJump_5
       rect:
         serializedVersion: 2
-        x: 240
+        x: 374
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +167,10 @@ TextureImporter:
       name: SuperSoyBoyJump_6
       rect:
         serializedVersion: 2
-        x: 288
+        x: 448
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,10 +180,10 @@ TextureImporter:
       name: SuperSoyBoyJump_7
       rect:
         serializedVersion: 2
-        x: 336
+        x: 523
         y: 0
-        width: 48
-        height: 52
+        width: 73
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: SuperSoyBoyJump_8
       rect:
         serializedVersion: 2
-        x: 384
+        x: 596
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: SuperSoyBoyJump_9
       rect:
         serializedVersion: 2
-        x: 432
+        x: 671
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: SuperSoyBoyJump_10
       rect:
         serializedVersion: 2
-        x: 480
+        x: 746
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: SuperSoyBoyJump_11
       rect:
         serializedVersion: 2
-        x: 528
+        x: 820
         y: 0
-        width: 48
-        height: 52
+        width: 74
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: SuperSoyBoyJump_12
       rect:
         serializedVersion: 2
-        x: 576
+        x: 894
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: SuperSoyBoyJump_13
       rect:
         serializedVersion: 2
-        x: 624
+        x: 970
         y: 0
-        width: 48
-        height: 52
+        width: 75
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,12 +271,12 @@ TextureImporter:
       name: SuperSoyBoyJump_14
       rect:
         serializedVersion: 2
-        x: 672
+        x: 1046
         y: 0
-        width: 48
-        height: 52
+        width: 70
+        height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
