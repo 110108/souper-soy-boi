@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super soy boy", "Assembly-CSharp-firstpass.csproj", "{9186FBC3-55F1-A768-B4F2-A9C3330A0AEC}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super soy boy", "Assembly-CSharp.csproj", "{A0474A02-B146-071D-96AF-07EDC03205B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "super soy boy", "Assembly-CSharp-Editor-firstpass.csproj", "{00A6D348-6B91-3697-6177-0C34C3B2F615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9186FBC3-55F1-A768-B4F2-A9C3330A0AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9186FBC3-55F1-A768-B4F2-A9C3330A0AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9186FBC3-55F1-A768-B4F2-A9C3330A0AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9186FBC3-55F1-A768-B4F2-A9C3330A0AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A0474A02-B146-071D-96AF-07EDC03205B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A0474A02-B146-071D-96AF-07EDC03205B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0474A02-B146-071D-96AF-07EDC03205B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0474A02-B146-071D-96AF-07EDC03205B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A6D348-6B91-3697-6177-0C34C3B2F615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A6D348-6B91-3697-6177-0C34C3B2F615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A6D348-6B91-3697-6177-0C34C3B2F615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A6D348-6B91-3697-6177-0C34C3B2F615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,11 +32,11 @@ public class playerControler : MonoBehaviour {
 		var acceleration = accel;
 		var xVelocity = 0f;
 		if (input.x == 0) {
-			xVelocity = 0f;
+			xVelocity = 1f;
 		} else {
 			xVelocity = rb.velocity.x;
 		}
-		rb.AddForce (new Vector2 (((input.x * speed) - rb.velocity.x) * acceleration, 0));
+		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
 		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
 	}
 }
