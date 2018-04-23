@@ -14,8 +14,8 @@ public class playerControler : MonoBehaviour {
 	private SpriteRenderer sr;
 	private Rigidbody2D rb;
 	private Animator an;
-	private int xCor;
-	private int yCor;
+	private float xCor;
+	private float yCor;
 
 	void start(){
 		sr = GetComponent<SpriteRenderer> ();
@@ -26,13 +26,13 @@ public class playerControler : MonoBehaviour {
 	void update(){
 		input.x = Input.GetAxis ("Horizontal");
 		input.y = Input.GetAxis ("Jump");
-		if(Input.GetButtonDown("Right")){
+		if(Input.GetButtonDown("RightArrow")){
 			xCor++;
-			player.transform.position.x = xCor;
+			player.transform.position = new Vector2(xCor, player.transform.position.y);
 		}
-		if(Input.GetKeyDown(KeyCode("left"))){
+		if(Input.GetKeyDown("leftArrow")){
 			xCor--;
-			player.transform.position.x = xCor;
+			player.transform.position =new Vector2(xCor, player.transform.position.y);
 		}				
 		if (input.x > 0f) {
 			sr.flipX = false;
@@ -49,6 +49,11 @@ public class playerControler : MonoBehaviour {
 		}
 		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
 		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
+
+		float moveHorizontal=Input.GetAxis("Horizontal");
+		float moveVertical=Input.GetAxis("Vertical");
+		Vector3 movement=new Vector2 (moveHorizontal,moveVertical);
+		rb.AddForce(movement*speed);
 
 //		if (Input.GetKey("Space")){
 //			animation.CrossFade ("SuperSoyBoyJump_0");
