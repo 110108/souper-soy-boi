@@ -8,11 +8,14 @@ public class playerControler : MonoBehaviour {
 
 	public float speed = 14f;
 	public float accel = 6f;
+	public GameObject player;
 
 	private Vector2 input;
 	private SpriteRenderer sr;
 	private Rigidbody2D rb;
 	private Animator an;
+	private int xCor;
+	private int yCor;
 
 	void start(){
 		sr = GetComponent<SpriteRenderer> ();
@@ -23,6 +26,14 @@ public class playerControler : MonoBehaviour {
 	void update(){
 		input.x = Input.GetAxis ("Horizontal");
 		input.y = Input.GetAxis ("Jump");
+		if(Input.GetButtonDown("Right")){
+			xCor++;
+			player.transform.position.x = xCor;
+		}
+		if(Input.GetKeyDown(KeyCode("left"))){
+			xCor--;
+			player.transform.position.x = xCor;
+		}				
 		if (input.x > 0f) {
 			sr.flipX = false;
 		} else if (input.x < 0f) {
@@ -39,8 +50,8 @@ public class playerControler : MonoBehaviour {
 		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
 		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
 
-		if (Input.GetKey("Space")){
-			an.Play ("SuperSoyBoyJump_0");
-		}
+//		if (Input.GetKey("Space")){
+//			animation.CrossFade ("SuperSoyBoyJump_0");
+//		}
 	}
 }
