@@ -12,11 +12,11 @@ public class playerControler : MonoBehaviour {
 	private Vector2 input;
 	private SpriteRenderer sr;
 	private Rigidbody2D rb;
-	private Animator animator;
+	private Animator an;
 
 	void start(){
 		sr = GetComponent<SpriteRenderer> ();
-		animator = GetComponent<Animator> ();
+		an = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
@@ -38,5 +38,9 @@ public class playerControler : MonoBehaviour {
 		}
 		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
 		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
+
+		if (Input.GetKey("Space")){
+			an.Play ("SuperSoyBoyJump_0");
+		}
 	}
 }
