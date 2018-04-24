@@ -27,34 +27,33 @@ public class playerControler : MonoBehaviour {
 		input.x = Input.GetAxis ("Horizontal");
 		input.y = Input.GetAxis ("Jump");
 		if(Input.GetButtonDown("RightArrow")){
-			xCor++;
-			player.transform.position = new Vector2(xCor, player.transform.position.y);
+			rb.AddForce(new Vector2(accel,0)); 
 		}
 		if(Input.GetKeyDown("leftArrow")){
 			xCor--;
 			player.transform.position =new Vector2(xCor, player.transform.position.y);
 		}				
-		if (input.x > 0f) {
-			sr.flipX = false;
-		} else if (input.x < 0f) {
-			sr.flipX = true;
-		}
-
-		var acceleration = accel;
-		var xVelocity = 0f;
-		if (input.x == 0) {
-			xVelocity = 1f;
-		} else {
-			xVelocity = rb.velocity.x;
-		}
-		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
-		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
-
-		float moveHorizontal=Input.GetAxis("Horizontal");
-		float moveVertical=Input.GetAxis("Vertical");
-		Vector3 movement=new Vector2 (moveHorizontal,moveVertical);
-		rb.AddForce(movement*speed);
-
+//		if (input.x > 0f) {
+//			sr.flipX = false;
+//		} else if (input.x < 0f) {
+//			sr.flipX = true;
+//		}
+//
+//		var acceleration = accel;
+//		var xVelocity = 0f;
+//		if (input.x == 0) {
+//			xVelocity = 1f;
+//		} else {
+//			xVelocity = rb.velocity.x;
+//		}
+//		rb.AddForce (new Vector2 (((input.x * speed) + rb.velocity.x) * acceleration, 0));
+//		rb.velocity = new Vector2 (xVelocity, rb.velocity.y);
+//
+//		float moveHorizontal=Input.GetAxis("Horizontal");
+//		float moveVertical=Input.GetAxis("Vertical");
+//		Vector3 movement=new Vector2 (moveHorizontal,moveVertical);
+//		rb.AddForce(movement*speed);
+//				
 //		if (Input.GetKey("Space")){
 //			animation.CrossFade ("SuperSoyBoyJump_0");
 //		}
