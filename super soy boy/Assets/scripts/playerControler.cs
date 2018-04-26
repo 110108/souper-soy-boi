@@ -16,23 +16,31 @@ public class playerControler : MonoBehaviour {
 	private Animator an;
 	private float xCor;
 	private float yCor;
+	private Vector2 reset;
 
 	void start(){
 		sr = GetComponent<SpriteRenderer> ();
 		an = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
+		reset = player.transform.position;
 	}
 
 	void update(){
 		input.x = Input.GetAxis ("Horizontal");
 		input.y = Input.GetAxis ("Jump");
 		if(Input.GetButtonDown("RightArrow")){
-			rb.AddForce(new Vector2(accel,0)); 
+			float moveHorizontal = Input.GetAxis("Horizontal");
+			float moveVertical = Input.GetAxis("Vertical");
+			Vector3 movement = new Vector2 (moveHorizontal,moveVertical);
+			rb.AddForce(movement*speed);
 		}
 		if(Input.GetKeyDown("leftArrow")){
 			xCor--;
 			player.transform.position =new Vector2(xCor, player.transform.position.y);
-		}				
+		}	
+		if(player.transform.position.y<=-10){
+			player.transform.position.y=reset.y;
+		}
 //		if (input.x > 0f) {
 //			sr.flipX = false;
 //		} else if (input.x < 0f) {
