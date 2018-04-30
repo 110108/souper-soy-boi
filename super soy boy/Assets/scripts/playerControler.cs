@@ -17,15 +17,24 @@ public class playerControler : MonoBehaviour {
 	private float xCor;
 	private float yCor;
 	private Vector2 reset;
+	private Vector2 pos;
+	private Vector2 z = new Vector2(0,0);
+
 
 	void start(){
 		sr = GetComponent<SpriteRenderer> ();
 		an = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
-		reset = player.transform.position;
+		reset = new Vector2(player.transform.position.x, player.transform.position.y);
+
 	}
 
 	void update(){
+		if(player.transform.position.y<(-5)){
+			pos=reset;
+			rb.velocity = z;
+		}
+		transform.position = pos;
 		input.x = Input.GetAxis ("Horizontal");
 		input.y = Input.GetAxis ("Jump");
 		if(Input.GetButtonDown("RightArrow")){
@@ -36,11 +45,8 @@ public class playerControler : MonoBehaviour {
 		}
 		if(Input.GetKeyDown("leftArrow")){
 			xCor--;
-			player.transform.position =new Vector2(xCor, player.transform.position.y);
+			pos = new Vector2(xCor, player.transform.position.y);
 		}	
-		if(player.transform.position.y<=-10){
-			player.transform.position.y=reset.y;
-		}
 //		if (input.x > 0f) {
 //			sr.flipX = false;
 //		} else if (input.x < 0f) {
