@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/110108/Documents/GitHub/sprites/Assets/scenes/ssb.unity
+- path: Assets/Scenes/Level1.unity
   isLoaded: 1
   isActive: 1
