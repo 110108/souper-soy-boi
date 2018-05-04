@@ -147,6 +147,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010324839720, guid: a219ef1f90293274e8992105dff1e0d1,
+        type: 2}
+      propertyPath: depth
+      value: -15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a219ef1f90293274e8992105dff1e0d1, type: 2}
   m_IsPrefabParent: 0
@@ -268,7 +273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 462548827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.2, y: -19.9, z: 0}
+  m_LocalPosition: {x: -10.68, y: -19.94, z: 0}
   m_LocalScale: {x: -30.76, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1503194645}
@@ -755,7 +760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1261599008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,7 +876,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383472452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7, y: -0.42, z: -10}
+  m_LocalPosition: {x: -6.32, y: -2.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -891,10 +896,10 @@ MonoBehaviour:
   camTarget: {fileID: 1344132856}
   trackingSpeed: 2.5
   cameraZDepth: -10
-  minX: -1.7
-  minY: -1.09
-  maxX: 28
-  maxY: 29
+  minX: -100
+  minY: -100
+  maxX: 100
+  maxY: 100
 --- !u!4 &1496488225
 Transform:
   m_ObjectHideFlags: 0

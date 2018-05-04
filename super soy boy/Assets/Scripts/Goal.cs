@@ -14,11 +14,11 @@ public class Goal : MonoBehaviour {
             {
                 audioSource.PlayOneShot(goalClip);
             }
-            GameManager.instance.RestartLevel(0.5f);
+            //GameManager.instance.RestartLevel(0.5f);
             //Find the timer script and refrence it
-            var timer = FindObjectOfType<Timer>();
+            //var timer = FindObjectOfType<Timer>();
             //Call the save time method in the game manager script and pass through the time from the timer script
-            GameManager.instance.SaveTime(timer.time);
+            GameManager.instance.RestartLevel(0.5f);
 
         }
     }

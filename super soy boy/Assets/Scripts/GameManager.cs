@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        DiscoverLevels();
+//        DiscoverLevels();
         SceneManager.sceneLoaded += OnSceneLoaded;
 	}
 
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
     private IEnumerator RestartLevelDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 
     public List<PlayerTimeEntry> LoadPreviousTimes()
@@ -131,11 +131,11 @@ public class GameManager : MonoBehaviour {
             LoadLevelContent();
             DisplayPreviousTimes();
         }
-        //Load the level files if the menu is loaded
-        if (scene.name == "Menu")
-        {
-            DiscoverLevels();
-        }
+//        //Load the level files if the menu is loaded
+//        if (scene.name == "Menu")
+//        {
+//            DiscoverLevels();
+//        }
     }
 
     private void SetLevelName(string levelFilePath)
@@ -144,49 +144,47 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("Game");
     }
 
-    private void DiscoverLevels()
-    {
-        //Get a reference to the rect transform that will hold the buttons to load each level
-        var levelPanelRectTransform = GameObject.Find("LevelItemsPanel").GetComponent<RectTransform>();
-        //Get a refrence to any JSON files
-        var levelFiles = Directory.GetFiles(Application.persistentDataPath, "*.json");
-
-        Debug.Log(levelFiles.Length.ToString());
-
-        var yOffset = 0f;
-        for(var i = 0; i < levelFiles.Length; i++)
-        {
-            //Set the offset for the buttons position in the rect tranfsform
-            if(i == 0)
-            {
-                yOffset = -30f;
-            }
-            else
-            {
-                yOffset -= 65f;
-            }
-            //Get the name of the current file
-            var levelFile = levelFiles[i];
-            var levelName = Path.GetFileName(levelFile);
-            //Spawn a new button instance
-            var levelButtonObj = (GameObject)Instantiate(buttonPrefab, Vector2.zero, Quaternion.identity);
-            //Make the spawned button a child of the panel and gets its transform
-            var levelButtonRectTransform = levelButtonObj.GetComponent<RectTransform>();
-            levelButtonRectTransform.SetParent(levelPanelRectTransform, true);
-            //Set the position of the button
-            levelButtonRectTransform.anchoredPosition = new Vector2(212.5f, yOffset);
-            //Change the button text to the name of the level
-            var levelButtonText = levelButtonObj.transform.GetChild(0).GetComponent<Text>();
-            levelButtonText.text = levelName;
-            //Use delegate to call SetLevelName and pass in different values
-            var levelButton = levelButtonObj.GetComponent<Button>();
-            levelButton.onClick.AddListener(delegate { SetLevelName(levelFile); });
-            //Expand the size of the panel to fit all the buttons
-            levelPanelRectTransform.sizeDelta = new Vector2(levelPanelRectTransform.sizeDelta.x, 60f * i);
-        }
-        //Reset the panels scroll value
-        levelPanelRectTransform.offsetMax = new Vector2(levelPanelRectTransform.offsetMax.x, 0f);
-    }
+//    private void DiscoverLevels()
+//    {
+//        //Get a refrence to any JSON files
+//        var levelFiles = Directory.GetFiles(Application.persistentDataPath, "*.json");
+//
+//        Debug.Log(levelFiles.Length.ToString());
+//
+//        var yOffset = 0f;
+//        for(var i = 0; i < levelFiles.Length; i++)
+//        {
+//            //Set the offset for the buttons position in the rect tranfsform
+//            if(i == 0)
+//            {
+//                yOffset = -30f;
+//            }
+//            else
+//            {
+//                yOffset -= 65f;
+//            }
+//            //Get the name of the current file
+//            var levelFile = levelFiles[i];
+//            var levelName = Path.GetFileName(levelFile);
+//            //Spawn a new button instance
+//            var levelButtonObj = (GameObject)Instantiate(buttonPrefab, Vector2.zero, Quaternion.identity);
+//            //Make the spawned button a child of the panel and gets its transform
+//            var levelButtonRectTransform = levelButtonObj.GetComponent<RectTransform>();
+//            levelButtonRectTransform.SetParent(levelPanelRectTransform, true);
+//            //Set the position of the button
+//            levelButtonRectTransform.anchoredPosition = new Vector2(212.5f, yOffset);
+//            //Change the button text to the name of the level
+//            var levelButtonText = levelButtonObj.transform.GetChild(0).GetComponent<Text>();
+//            levelButtonText.text = levelName;
+//            //Use delegate to call SetLevelName and pass in different values
+//            var levelButton = levelButtonObj.GetComponent<Button>();
+//            levelButton.onClick.AddListener(delegate { SetLevelName(levelFile); });
+//            //Expand the size of the panel to fit all the buttons
+//            levelPanelRectTransform.sizeDelta = new Vector2(levelPanelRectTransform.sizeDelta.x, 60f * i);
+//        }
+//        //Reset the panels scroll value
+//        levelPanelRectTransform.offsetMax = new Vector2(levelPanelRectTransform.offsetMax.x, 0f);
+//    }
 
     private void LoadLevelContent()
     {

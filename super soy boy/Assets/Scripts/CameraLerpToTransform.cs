@@ -13,16 +13,14 @@ public class CameraLerpToTransform : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (camTarget != null)
-        {
-            var newPos = Vector2.Lerp(transform.position,
-                          camTarget.position,
-                          Time.deltaTime * trackingSpeed);
-            var camPosition = new Vector3(newPos.x, newPos.y, -10f);
-            var v3 = camPosition;
-            var clampX = Mathf.Clamp(v3.x, minX, maxX);
-            var clampY = Mathf.Clamp(v3.y, minY, maxY);
-            transform.position = new Vector3(clampX, clampY, -10f);
-        }
+		if (camTarget != null)
+		{
+			var newPos = Vector2.Lerp (transform.position, camTarget.position, Time.deltaTime * trackingSpeed);
+			var camPos = new Vector3 (newPos.x, newPos.y, -10f);
+			var v3 = camPos;
+			var clampX = Mathf.Clamp (v3.x, minX, maxX);
+			var clampY = Mathf.Clamp (v3.y, minY, maxY);
+			transform.position = new Vector3 (clampX, clampY, -10f);
+		}
     }
 }

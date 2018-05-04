@@ -6,6 +6,7 @@ public class SoyBoyController : MonoBehaviour {
 
     public float speed = 14f;
     public float accel = 6f;
+	public int depth;
     private Vector2 input;
     private SpriteRenderer sr;
     private Rigidbody2D rb;
@@ -164,6 +165,7 @@ public class SoyBoyController : MonoBehaviour {
         }
 
         if (jumpDuration > jumpDurationThreshold) input.y = 0f;
+		if (rb.transform.position.y<depth)GameManager.instance.RestartLevel(0.5f);
     }
 
     void FixedUpdate()
