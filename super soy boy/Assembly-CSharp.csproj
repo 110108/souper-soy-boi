@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\RotationScript.cs" />
      <Compile Include="Assets\Scripts\SoyBoyController.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\fakeGoal.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
