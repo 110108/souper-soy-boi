@@ -1123,6 +1123,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012036862378, guid: bd37a1a340d2bf742bc258fa13272a6f, type: 2}
+      propertyPath: m_TagString
+      value: fakeout
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000011389256214, guid: bd37a1a340d2bf742bc258fa13272a6f, type: 2}
     - {fileID: 61000010783292460, guid: bd37a1a340d2bf742bc258fa13272a6f, type: 2}
@@ -2149,12 +2153,24 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &1459956687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459956682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7762dbcb835a76e4e9c50748e702d87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  This: {fileID: 1459956682}
 --- !u!4 &1496488225
 Transform:
   m_ObjectHideFlags: 0
