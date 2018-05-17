@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 2855
+  controlID: 1577
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 221}
   m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
-  controlID: 2743
+  controlID: 1578
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,9 +184,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.753449, y: 0.24821067, z: 1.4375}
+    m_Target: {x: -21.209408, y: -3.2650032, z: 1.4375}
     speed: 2
-    m_Value: {x: -10.753449, y: 0.24821067, z: 1.4375}
+    m_Value: {x: -21.209408, y: -3.2650032, z: 1.4375}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -329,9 +329,9 @@ MonoBehaviour:
     height: 523
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 82f6ffff
-    m_LastClickedID: -2430
-    m_ExpandedIDs: 84f6ffff00000000b0290000
+    m_SelectedIDs: a470ffff
+    m_LastClickedID: -36700
+    m_ExpandedIDs: 60f6ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_MinSize: {x: 334, y: 271}
   m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
-  controlID: 2856
+  controlID: 1544
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -521,8 +521,8 @@ MonoBehaviour:
     y: 0
     width: 1358
     height: 404
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -565,19 +565,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\110108\Documents\GitHub\souper-soy-boi\super soy boy
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c280000
-    m_LastClickedID: 10396
-    m_ExpandedIDs: 000000003228000000ca9a3bffffff7f
+    m_SelectedIDs: b8280000
+    m_LastClickedID: 10424
+    m_ExpandedIDs: 000000004628000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -605,7 +605,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003228000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000004628000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -630,8 +630,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 82f6ffff
-    m_LastClickedInstanceID: -2430
+    m_SelectedInstanceIDs: a470ffff
+    m_LastClickedInstanceID: -36700
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: ee240000c427000000000000fe24000070280000
     m_RenameOverlay:
@@ -678,8 +678,8 @@ MonoBehaviour:
     y: 0
     width: 562
     height: 404
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}

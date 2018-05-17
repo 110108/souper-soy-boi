@@ -135,6 +135,11 @@ public class SoyBoyController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+		if(ded==true)
+		{
+			player.transform.position = startPos;
+			ded = false;
+		}
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Jump");
         animator.SetFloat("Speed", Mathf.Abs(input.x));
