@@ -6,11 +6,12 @@ public class Hazard : MonoBehaviour {
     public GameObject playerDeathPrefab;
     public AudioClip deathClip;
     public Sprite hitSprite;
-    private SpriteRenderer spriteRenderer;
+	public Sprite bladeSprite;
+    private SpriteRenderer sr;
 
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+		sr = GetComponent<SpriteRenderer>();
     }
 
     // Use this for initialization
@@ -29,9 +30,13 @@ public class Hazard : MonoBehaviour {
             }
             Instantiate(playerDeathPrefab, coll.contacts[0].point,
               Quaternion.identity);
-            spriteRenderer.sprite = hitSprite;
-            Destroy(coll.gameObject);
-            GameManager.instance.RestartLevel(1.25f);
+           	sr.sprite = hitSprite;
+			SoyBoyController obj = new SoyBoyController();
+			coll.transform.position = obj.startPos;
+			GameObject.Find("SoyBoy").GetComponent <SoyBoyController>().ded = true;
+			sr.sprite = bladeSprite;
+//            Destroy(coll.gameObject);
+//            GameManager.instance.RestartLevel(1.25f);
         }
     }
 

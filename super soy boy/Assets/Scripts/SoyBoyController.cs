@@ -7,24 +7,32 @@ public class SoyBoyController : MonoBehaviour {
     public float speed = 14f;
     public float accel = 6f;
 	public int depth;
-    private Vector2 input;
+	public bool isJumping;
+	public bool ded;
+	public float jumpSpeed = 8f;
+	public float airAccel = 3f;
+	public float jump = 14f;
+	public AudioClip runClip;
+	public AudioClip jumpClip;
+	public AudioClip slideClip;
+	public Vector3 startPos;
+	public GameObject player;
+
+	private Vector2 input;
     private SpriteRenderer sr;
     private Rigidbody2D rb;
     private Animator animator;
-    public bool isJumping;
-    public float jumpSpeed = 8f;
     private float rayCastLengthCheck = 0.005f;
     private float width;
     private float height;
     public float jumpDurationThreshold = 0.25f;
     private float jumpDuration;
-    public float airAccel = 3f;
-    public float jump = 14f;
-    public AudioClip runClip;
-    public AudioClip jumpClip;
-    public AudioClip slideClip;
     private AudioSource audioSource;
 
+	void start() 
+	{
+		startPos = player.transform.position;
+	}
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -34,10 +42,11 @@ public class SoyBoyController : MonoBehaviour {
         height = GetComponent<Collider2D>().bounds.extents.y + 0.2f;
         audioSource = GetComponent<AudioSource>();
     }
-
-    // Use this for initialization
-    void Start () {
-	
+		
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.tag=="Checkpoint"){
+			startPos = other.transform.position;
+		}
 	}
 
     void PlayAudioClip(AudioClip clip)
@@ -165,7 +174,9 @@ public class SoyBoyController : MonoBehaviour {
         }
 
         if (jumpDuration > jumpDurationThreshold) input.y = 0f;
-		if (rb.transform.position.y<depth)GameManager.instance.RestartLevel(0.5f);
+		if (rb.transform.position.y < depth) {
+			rb.transform.position = startPos;
+		}
     }
 
     void FixedUpdate()
